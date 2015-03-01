@@ -2,7 +2,7 @@
 
 namespace Elibyy\TCPDF;
 
-
+use \Config;
 /**
  * Class ServiceProvider
  * @version 1.0

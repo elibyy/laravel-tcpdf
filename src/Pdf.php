@@ -3,7 +3,7 @@
 namespace Elibyy\TCPDF;
 
 use TCPDF;
-
+use \Config;
 /**
  * Class Pdf
  * @version 1.0
