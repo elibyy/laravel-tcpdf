@@ -3,6 +3,7 @@
   "description": "tcpdf support for laravel 5",
   "minimum-stability": "stable",
   "license": "proprietary",
+  "keywords":["laravel","tcpdf","pdf"],
   "authors": [
     {
       "name": "eli y",
