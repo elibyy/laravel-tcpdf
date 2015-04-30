@@ -30,6 +30,8 @@ That's it! You're good to go.
 Here is a little example:
 
 ```php
+use PDF;
+
 PDF::SetTitle('Hello World');
 
 PDF::AddPage();
