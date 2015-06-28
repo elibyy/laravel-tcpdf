@@ -5,7 +5,8 @@
 A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
 ## Installation
-
+for laravel 5.1 use the 5.1 branch or version 0.0.2
+ 
 The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `elibyy/laravel-tcpdf` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
 
 ```json
