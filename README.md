@@ -20,15 +20,8 @@ Next, add the service provider to `config/app.php`.
 
 ```php
 'providers' => [
-    //...
-    Elibyy\TCPDF\ServiceProvider::class,
-]
-```
-
-```php
-'aliases' => [
-    //...
-    'PDF' => Elibyy\TCPDF\Facades\TCPdf::class,
+    //..
+    'Elibyy\TCPDF\ServiceProvider',
 ]
 ```
 
