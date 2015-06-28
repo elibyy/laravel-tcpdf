@@ -2,6 +2,14 @@
 
 namespace Elibyy\TCPDF;
 
+use \Config;
+use Illuminate\Foundation\AliasLoader;
+
+/**
+ * Class ServiceProvider
+ * @version 1.0
+ * @package Elibyy\TCPDF
+ */
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 	protected $constantsMap = [
@@ -19,9 +27,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 	{
 		$configPath = __DIR__ . '/../config/laravel-tcpdf.php';
 		$this->mergeConfigFrom($configPath, 'laravel-tcpdf');
-		$this->app->bindShared('tcpdf', function ($app) {
-			return new TcPdf($app);
+		$this->app->bindShared('pdf', function ($app) {
+			return new Pdf($app);
 		});
+		AliasLoader::getInstance()->alias('PDF', 'Elibyy\TCPDF\Facades\Pdf');
 	}
 
 	public function boot()
@@ -31,7 +40,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 		}
 
 		foreach ($this->constantsMap as $key => $value) {
-			$value = config('laravel-tcpdf.' . $value, null);
+			$value = Config::get('laravel-tcpdf.' . $value, null);
 			if (!is_null($value) && !defined($key)) {
 				if (is_string($value) && strlen($value) == 0) {
 					continue;
