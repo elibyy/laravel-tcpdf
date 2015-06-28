@@ -4,15 +4,10 @@ namespace Elibyy\TCPDF\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * Class Pdf
- * @version 1.0
- * @package Elibyy\TCPDF\Facades
- */
-class Pdf extends Facade
+class TCPdf extends Facade
 {
 	protected static function getFacadeAccessor()
 	{
-		return 'pdf';
+		return 'tcpdf';
 	}
 }
