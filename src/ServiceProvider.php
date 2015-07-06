@@ -20,7 +20,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 		$configPath = __DIR__ . '/../config/laravel-tcpdf.php';
 		$this->mergeConfigFrom($configPath, 'laravel-tcpdf');
 		$this->app->bindShared('tcpdf', function ($app) {
-			return new TcPdf($app);
+			return new TCPdf($app);
 		});
 	}
 
