@@ -2,15 +2,26 @@
 
 namespace Elibyy\TCPDF;
 
-class TCPdf extends \TCPDF
+class TCPdf
 {
 	protected $app;
 	protected static $format;
+	protected $tcpdf;
 
 	public function __construct($app)
 	{
 		$this->app = $app;
-		parent::__construct(
+		$this->reset();
+	}
+
+	public static function changeFormat($format)
+	{
+		static::$format = $format;
+	}
+
+	public function reset()
+	{
+		$this->tcpdf = new \TCPDF(
 			config('laravel-tcpdf.page_orientation', 'P'),
 			config('laravel-tcpdf.page_unit', 'mm'),
 			static::$format ? static::$format : config('laravel-tcpdf.page_format', 'A4'),
@@ -19,8 +30,11 @@ class TCPdf extends \TCPDF
 		);
 	}
 
-	public static function changeFormat($format)
+	public function __call($method, $args)
 	{
-		static::$format = $format;
+		if (method_exists($this->tcpdf, $method)) {
+			return call_user_func_array([$this->tcpdf, $method], $args);
+		}
+		throw new \RuntimeException(sprintf('the method %s does not exists in TCPDF', $method));
 	}
 }

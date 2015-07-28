@@ -11,7 +11,7 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
 ```json
 {
     "require": {
-        "elibyy/laravel-tcpdf": "0.0.3"
+        "elibyy/laravel-tcpdf": "0.0.4"
     }
 }
 ```
@@ -56,4 +56,9 @@ If you want to override the defaults, you can publish the config, like so:
 
     php artisan vendor:publish
 
-Now access `config/laravel-tcpdf.php`to customize.
+Now access `config/laravel-tcpdf.php` to customize.
+
+
+### Notice
+
+the latest 0.0.4 now uses internal instance to allow the creation of multiple PDF at once
