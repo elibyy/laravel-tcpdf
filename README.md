@@ -1,5 +1,5 @@
 # Laravel 5 TCPDF
-
+[![Latest Stable Version](https://poser.pugx.org/elibyy/laravel-tcpdf/v/stable)](https://packagist.org/packages/elibyy/laravel-tcpdf) [![Total Downloads](https://poser.pugx.org/elibyy/laravel-tcpdf/downloads)](https://packagist.org/packages/elibyy/laravel-tcpdf) [![Latest Unstable Version](https://poser.pugx.org/elibyy/laravel-tcpdf/v/unstable)](https://packagist.org/packages/elibyy/laravel-tcpdf) [![License](https://poser.pugx.org/elibyy/laravel-tcpdf/license)](https://packagist.org/packages/elibyy/laravel-tcpdf)
 [![Join the chat at https://gitter.im/elibyy/laravel-tcpdf](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/elibyy/laravel-tcpdf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A simple [Laravel 5](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
