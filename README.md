@@ -11,7 +11,7 @@ The Laravel TCPDF service provider can be installed via [composer](http://getcom
 ```json
 {
     "require": {
-        "elibyy/laravel-tcpdf": "0.0.5"
+        "elibyy/laravel-tcpdf": "0.0.6"
     }
 }
 ```
@@ -61,4 +61,11 @@ Now access `config/laravel-tcpdf.php` to customize.
 
 ### Notice
 
-the latest 0.0.5 now uses internal instance to allow the creation of multiple PDF at once
+the latest 0.0.6 now uses internal instance to allow the creation of multiple PDF at once
+
+
+## Header/Footer helpers
+
+I've got a pull-request asking for this so I've added the feature
+
+now you can use `PDF::setHeaderCallback(function($pdf){})` or `PDF::setFooterCallback(function($pdf){})`
