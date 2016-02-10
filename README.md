@@ -1,4 +1,4 @@
-# PLEASE NOTE: This repository is no logner maintained please use [new](https://github.com/elibyy/tcpdf-laravel)one
+# PLEASE NOTE: This repository is no logner maintained please use [new](https://github.com/elibyy/tcpdf-laravel) one
 
 # Laravel 5 TCPDF
 
